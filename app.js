@@ -1,7 +1,6 @@
 var express = require('express');
 var jade = require('jade')
-
-var fs = require('fs');
+var googleApi = require('./googleApi');
 var http = require('http');
 
 process.on('uncaughtException', function(err) {

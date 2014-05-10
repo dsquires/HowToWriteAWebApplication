@@ -3,17 +3,19 @@ $background: #f3f3f3;
 
 @mixin fontNormal() {
   font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 @mixin fontHeader() {
   font-family: Consolas, monaco, monospace;
-  font-size: 40px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 @mixin fontSubheader() {
   font-family: Consolas, monaco, monospace;
-  font-size: 30px;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 body {
@@ -24,16 +26,28 @@ body {
   #divOneHundredPercent {
     width: 100%;
 
+    // only one!
+    #divContent {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    // only one!
     #divHeader {
       width: 90%;
       margin: 0 auto;
       @include fontHeader();
     }
 
-    #divContent {
-      width: 90%;
-      margin: 0 auto;
+    .divSubHeader {
+      @include fontSubheader();
+      padding-top: 20px;
     }
+
+    .divNormalText {
+      padding-top: 15px;
+    }
+
   }
 
   a {
@@ -46,3 +60,4 @@ body {
     text-decoration: underline
   }
 }
+
