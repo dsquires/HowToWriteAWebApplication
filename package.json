@@ -1,0 +1,14 @@
+{
+    "name": "NodejsWebsiteTemplate",
+    "description": "Nodejs Website Template",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+    },
+    "dependencies": {
+        "express": "*",
+        "jade": "*"
+    },
+    "devDependencies": {
+    }
+}

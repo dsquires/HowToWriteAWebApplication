@@ -1,0 +1,48 @@
+$color1: black;
+$background: #f3f3f3;
+
+@mixin fontNormal() {
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+  font-size: 20px;
+}
+
+@mixin fontHeader() {
+  font-family: Consolas, monaco, monospace;
+  font-size: 40px;
+}
+
+@mixin fontSubheader() {
+  font-family: Consolas, monaco, monospace;
+  font-size: 30px;
+}
+
+body {
+  color: $color1;
+  background-color: $background;
+  @include fontNormal();
+
+  #divOneHundredPercent {
+    width: 100%;
+
+    #divHeader {
+      width: 90%;
+      margin: 0 auto;
+      @include fontHeader();
+    }
+
+    #divContent {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  a {
+    color: #1e90ff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #4169e1;
+    text-decoration: underline
+  }
+}
