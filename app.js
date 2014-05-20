@@ -1,6 +1,5 @@
 var express = require('express');
 var jade = require('jade')
-var googleApi = require('./googleApi');
 var http = require('http');
 
 process.on('uncaughtException', function(err) {
@@ -17,7 +16,7 @@ app.get('/', index);
 app.use(express.static(__dirname + '/public'));
 
 console.log('web server listening');
-http.createServer(app).listen(3000);
+http.createServer(app).listen(80);
 
 function index(req, res) {
     res.render('index', { isFrontPage: true });
